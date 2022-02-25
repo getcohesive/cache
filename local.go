@@ -172,14 +172,18 @@ func (c *localCache) Get(k Key) (Value, error) {
 	now := currentTime()
 	if c.isExpired(en, now) {
 		if c.loader == nil {
+			c.stats.RecordMisses(1)
 			c.sendEvent(eventDelete, en)
 		} else {
 			// For loading cache, we do not delete entry but leave it to
 			// the eviction policy, so users still can get the old value.
-			c.setEntryAccessTime(en, now)
-			c.refreshAsync(en)
+			// c.setEntryAccessTime(en, now)
+			// c.refreshAsync(en)
+
+			// Do sync load
+			c.stats.RecordMisses(1)
+			return c.load(k)
 		}
-		c.stats.RecordMisses(1)
 	} else {
 		c.setEntryAccessTime(en, now)
 		c.sendEvent(eventAccess, en)
