@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/goburrow/cache/synthetic"
+	"github.com/getcohesive/cache/synthetic"
 )
 
 const (

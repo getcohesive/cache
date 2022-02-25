@@ -5,7 +5,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/goburrow/cache"
+	"github.com/getcohesive/cache"
 )
 
 func main() {

@@ -1,6 +1,6 @@
 # Mango Cache
-[![GoDoc](https://godoc.org/github.com/goburrow/cache?status.svg)](https://godoc.org/github.com/goburrow/cache)
-![Go](https://github.com/goburrow/cache/workflows/Go/badge.svg)
+[![GoDoc](https://godoc.org/github.com/getcohesive/cache?status.svg)](https://godoc.org/github.com/getcohesive/cache)
+![Go](https://github.com/getcohesive/cache/workflows/Go/badge.svg)
 
 Partial implementations of [Guava Cache](https://github.com/google/guava) in Go.
 
@@ -17,7 +17,7 @@ The TinyLFU implementation is inspired by
 ## Download
 
 ```
-go get -u github.com/goburrow/cache
+go get -u github.com/getcohesive/cache
 ```
 
 ## Example
@@ -30,7 +30,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/goburrow/cache"
+	"github.com/getcohesive/cache"
 )
 
 func main() {
@@ -62,6 +62,6 @@ func main() {
 
 ## Performance
 
-See [traces](traces/) and [benchmark](https://github.com/goburrow/cache/wiki/Benchmark)
+See [traces](traces/) and [benchmark](https://github.com/getcohesive/cache/wiki/Benchmark)
 
 ![report](traces/report.png)
